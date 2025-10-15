@@ -1,33 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BetterMe Botswana
+
+A comprehensive web application designed to empower teens and youths in Botswana to overcome addictions, make smart life choices, improve mental health, and foster positivity amid high unemployment rates and challenging life circumstances.
+
+## Project Overview
+
+**BetterMe Botswana** is an innovative solution built by a team with expertise from MIT Engineering, Harvard CS, and Stanford MBA programs. The app addresses critical challenges faced by young people in Botswana through five key modules:
+
+### 🎯 Core Features
+
+1. **Addiction Recovery** - Resources and support to overcome addictions to drugs, gambling, betting, and other substances
+2. **Smart Decision Making** - Tools and guidance for making informed choices in relationships, career, and life
+3. **Mental Health Support** - Strategies to manage stress, anxiety, and build emotional resilience
+4. **Positivity Boost** - Affirmations, quotes, and activities to cultivate optimism and self-confidence
+5. **Career Guidance** - Tailored advice for navigating Botswana's job market and exploring entrepreneurship
+
+## Technology Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org) - React-based framework for modern web applications
+- **Language**: [TypeScript](https://www.typescriptlang.org/) - Type-safe development
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **Linting**: [ESLint](https://eslint.org/) - Code quality and consistency
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app auto-updates as you edit files in the `src/app` directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── page.tsx              # Home page with module overview
+│   ├── layout.tsx            # Root layout
+│   ├── globals.css           # Global styles
+│   ├── addiction/
+│   │   └── page.tsx          # Addiction recovery module
+│   ├── career/
+│   │   └── page.tsx          # Career guidance module
+│   ├── decisions/
+│   │   └── page.tsx          # Decision-making module
+│   ├── mental-health/
+│   │   └── page.tsx          # Mental health support module
+│   └── positivity/
+│       └── page.tsx          # Positivity boost module
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features in Detail
+
+### Addiction Recovery
+- Understanding addiction fundamentals
+- Recovery strategies and support networks
+- Resources specific to Botswana
+
+### Decision Making
+- Structured decision-making process (6-step framework)
+- Pros and cons evaluation tool
+- Guidance for relationships, education, finances, and health
+
+### Mental Health
+- Stress management techniques (breathing, mindfulness, exercise)
+- Building resilience and emotional well-being
+- When and how to seek professional help
+
+### Positivity
+- Daily affirmations and motivational quotes
+- Positive visualization and gratitude practices
+- Techniques for overcoming negative thoughts
+
+### Career Guidance
+- Understanding Botswana's job market
+- Career planning steps
+- Digital and soft skills development
+- Entrepreneurship resources
+
+## Deployment
+
+This project is optimized for deployment on [Vercel](https://vercel.com):
+
+1. Push your code to a Git repository
+2. Connect your repository to Vercel
+3. Vercel will automatically deploy on every push
+
+## Development Standards
+
+- TypeScript for type safety
+- ESLint for code quality
+- Responsive design with Tailwind CSS
+- Accessible and user-friendly interfaces
+
+## Contributing
+
+We welcome contributions! Please ensure:
+- All ESLint rules pass
+- Code is properly formatted
+- Changes are tested in development mode
+
+## Learning Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev)
+- [Tailwind CSS Guide](https://tailwindcss.com/docs)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+
+## License
+
+This project is open source and available for educational and community purposes.
+
+## Support
+
+For issues, questions, or feedback, please open an issue on the repository.
+
+---
+
+**Built with ❤️ for Botswana's Youth**
+
 
 ## Deploy on Vercel
 
