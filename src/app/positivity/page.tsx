@@ -27,66 +27,101 @@ export default function Positivity() {
             </p>
           </header>
 
-        <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-semibold text-yellow-600 mb-4">Daily Affirmations</h2>
-          <p className="text-gray-700 mb-4">Repeat these affirmations daily to build self-confidence:</p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-yellow-100 p-4 rounded">
-              <p className="text-gray-800 italic">&quot;I am capable of achieving my goals.&quot;</p>
-            </div>
-            <div className="bg-yellow-100 p-4 rounded">
-              <p className="text-gray-800 italic">&quot;I choose to focus on the positive.&quot;</p>
-            </div>
-            <div className="bg-yellow-100 p-4 rounded">
-              <p className="text-gray-800 italic">&quot;I am worthy of love and respect.&quot;</p>
-            </div>
-            <div className="bg-yellow-100 p-4 rounded">
-              <p className="text-gray-800 italic">&quot;Every challenge is an opportunity to grow.&quot;</p>
-            </div>
+          <div className="space-y-6">
+            <section className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20 hover-lift animate-slide-up">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-xl">💖</span>
+                </div>
+                <h2 className="text-2xl font-bold text-yellow-800">Daily Affirmations</h2>
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">Repeat these affirmations daily to build self-confidence:</p>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  'I am capable of achieving my goals.',
+                  'I choose to focus on the positive.',
+                  'I am worthy of love and respect.',
+                  'Every challenge is an opportunity to grow.'
+                ].map((affirmation, idx) => (
+                  <div key={idx} className="bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-xl border-2 border-yellow-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <p className="text-gray-800 font-semibold italic text-center">&quot;{affirmation}&quot;</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20 hover-lift animate-slide-up" style={{animationDelay: '0.1s'}}>
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-xl">💬</span>
+                </div>
+                <h2 className="text-2xl font-bold text-yellow-800">Inspiring Quotes</h2>
+              </div>
+              <div className="space-y-4">
+                {[
+                  {quote: 'The only way to do great work is to love what you do.', author: 'Steve Jobs'},
+                  {quote: 'Believe you can and you&apos;re halfway there.', author: 'Theodore Roosevelt'},
+                  {quote: 'Your attitude determines your direction.', author: 'Ralph Waldo Emerson'}
+                ].map((item, idx) => (
+                  <blockquote key={idx} className="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-400 pl-6 py-4 rounded-r-xl hover:shadow-md transition-shadow">
+                    <p className="text-gray-700 italic mb-2">&quot;{item.quote}&quot;</p>
+                    <cite className="text-yellow-700 font-semibold not-italic">- {item.author}</cite>
+                  </blockquote>
+                ))}
+              </div>
+            </section>
+
+            <section className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20 hover-lift animate-slide-up" style={{animationDelay: '0.2s'}}>
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-xl">🎯</span>
+                </div>
+                <h2 className="text-2xl font-bold text-yellow-800">Positivity Activities</h2>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  {icon: '📔', title: 'Gratitude Journal', desc: 'Write down 3 things you&apos;re grateful for each day.'},
+                  {icon: '🤝', title: 'Random Acts of Kindness', desc: 'Do something nice for someone else.'},
+                  {icon: '🌟', title: 'Positive Visualization', desc: 'Spend 5 minutes imagining your best self.'},
+                  {icon: '🏡', title: 'Surroundings Check', desc: 'Declutter your space and add uplifting elements.'},
+                  {icon: '🌅', title: 'Morning Routine', desc: 'Start your day with positive affirmations and stretching.'}
+                ].map((activity, idx) => (
+                  <li key={idx} className="flex items-start bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-xl border border-yellow-100">
+                    <span className="text-2xl mr-4">{activity.icon}</span>
+                    <div>
+                      <strong className="text-gray-800 block mb-1">{activity.title}:</strong>
+                      <span className="text-gray-600">{activity.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20 hover-lift animate-slide-up" style={{animationDelay: '0.3s'}}>
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-xl">🔄</span>
+                </div>
+                <h2 className="text-2xl font-bold text-yellow-800">Overcoming Negative Thoughts</h2>
+              </div>
+              <p className="text-gray-700 mb-4 leading-relaxed">When negative thoughts arise:</p>
+              <ol className="space-y-4">
+                {[
+                  'Acknowledge the thought without judgment.',
+                  'Challenge it: Is this thought based on facts or assumptions?',
+                  'Replace with a positive, realistic alternative.',
+                  'Focus on solutions rather than problems.'
+                ].map((step, idx) => (
+                  <li key={idx} className="flex items-start bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-xl border border-yellow-100">
+                    <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-white font-bold">
+                      {idx + 1}
+                    </div>
+                    <span className="text-gray-700">{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </section>
           </div>
-        </section>
-
-        <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-semibold text-yellow-600 mb-4">Inspiring Quotes</h2>
-          <div className="space-y-4">
-            <blockquote className="border-l-4 border-yellow-400 pl-4 italic text-gray-700">
-              &quot;The only way to do great work is to love what you do.&quot; - Steve Jobs
-            </blockquote>
-            <blockquote className="border-l-4 border-yellow-400 pl-4 italic text-gray-700">
-              &quot;Believe you can and you&apos;re halfway there.&quot; - Theodore Roosevelt
-            </blockquote>
-            <blockquote className="border-l-4 border-yellow-400 pl-4 italic text-gray-700">
-              &quot;Your attitude determines your direction.&quot; - Ralph Waldo Emerson
-            </blockquote>
-          </div>
-        </section>
-
-        <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-semibold text-yellow-600 mb-4">Positivity Activities</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li><strong>Gratitude Journal:</strong> Write down 3 things you&apos;re grateful for each day.</li>
-            <li><strong>Random Acts of Kindness:</strong> Do something nice for someone else.</li>
-            <li><strong>Positive Visualization:</strong> Spend 5 minutes imagining your best self.</li>
-            <li><strong>Surroundings Check:</strong> Declutter your space and add uplifting elements.</li>
-            <li><strong>Morning Routine:</strong> Start your day with positive affirmations and stretching.</li>
-          </ul>
-        </section>
-
-        <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-semibold text-yellow-600 mb-4">Overcoming Negative Thoughts</h2>
-          <p className="text-gray-700 mb-4">When negative thoughts arise:</p>
-          <ol className="list-decimal list-inside text-gray-700 space-y-2">
-            <li>Acknowledge the thought without judgment.</li>
-            <li>Challenge it: Is this thought based on facts or assumptions?</li>
-            <li>Replace with a positive, realistic alternative.</li>
-            <li>Focus on solutions rather than problems.</li>
-          </ol>
-        </section>
-
-        <div className="text-center">
-          <Link href="/" className="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
-            Back to Home
-          </Link>
         </div>
       </div>
     </div>
